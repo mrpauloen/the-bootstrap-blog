@@ -1,0 +1,425 @@
+/*
+Theme Name: The Bootstrap Blog
+Author: Paweł Nowak
+Author URI: https://www.facebook.com/PawRakiety
+Description: Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
+Version: 0.1.3.1
+Requires at least: 5.0
+Tested up to: 5.5
+Requires PHP: 7.0
+Tags: two-columns, custom-menu, custom-background, right-sidebar, custom-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, blog
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: the-bootstrap-blog
+Domain Path: /languages
+
+== Copyright & License Notes ==
+
+ The Bootstrap Blog WordPress Theme, Copyright 2020 Paweł Nowak
+ The Bootstrap Blog is distributed under the terms of the GNU GPL
+
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+ In general words, feel free and encouraged to use, modify and redistribute this theme however you like.
+ You may remove any copyright references (unless required by third party components) and crediting is not necessary.
+ The theme is offered free of charge. If someone asked money for it, someone just tricked you.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+
+ The Bootstrap Blog Theme bundles the following third-party resources:
+
+*! Playfair Display font
+ * Copyright: 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display)
+ * Licence: SIL Open Font License (OFL)
+ * Licence URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+ * Author: Claus Eggers Sørensen Principal design
+ * Author URL: http://forthehearts.net/about/
+
+*! pin.svg
+ * Copyright: Entypo
+ * Author URI: http://www.entypo.com/
+ * Licence: CC-BY-SA 4.0
+ * Licence URI: https://creativecommons.org/licenses/by-sa/4.0/
+ *
+
+*! lock.svg
+ * Copyright: Octicons
+ * Author URI: https://octicons.github.com/
+ * @link: https://octicons.github.com/icon/lock/
+ * Licence: MIT
+ * Licence URI: https://github.com/primer/octicons/blob/master/LICENSE
+ *
+
+*! screenshot.png
+ * Copyright:   http://unsplash.com/
+ * @link:       https://unsplash.com/photos/E0Spm6XXn2Y
+ * Author:      Sergey Zolkin
+ * Author URI:  https://unsplash.com/@szolkin
+ * License:     CC0
+ * Licence URI: https://unsplash.com/license
+ *
+
+*!
+ * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ *
+
+*! HTML5 Shiv v3.7.0,
+ * Copyright 2014 Alexander Farkas
+ * Licenses: 	MIT/GPL2
+ * Source: 		https://github.com/aFarkas/html5shiv
+ *
+
+*! Respond.js v1.4.2: min/max-width media query polyfill
+ * Copyright 2013 Scott Jehl
+ * Licensed under MIT https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+ *
+
+ **/
+
+body {
+   color: #555;
+   -ms-word-wrap: break-word;
+   word-wrap: break-word;
+ }
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  color: #444;
+  font-weight: 700;
+}
+/*
+ * Override Bootstrap's default container.
+ */
+.container {
+  max-width: 60rem;
+}
+/*
+ * Masthead for nav
+ */
+.blog-masthead {
+  /* margin-bottom: 3rem; */
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+  box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+}
+/* Nav links */
+.nav-link {
+  position: relative;
+  padding: 1rem;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: #2376BB;
+}
+/* Active state gets a caret at the bottom */
+.nav-link.active {
+  color: #fff;
+}
+.nav-link.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -.3rem;
+  vertical-align: middle;
+  content: "";
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid;
+  border-left: .3rem solid transparent;
+  background: transparent;
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: 0px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+/*
+ * Blog name and description
+ */
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+}
+/*
+ * Main column and sidebar layout
+ */
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 1rem;
+  margin: 0 -1rem 1rem;
+}
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: .25rem;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn, .round {
+  border-radius: 2rem;
+}
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+.comment-meta { padding-bottom: 10px }
+#comments > ul li.depth-1 { border-bottom: 1px solid #ededed }
+li.depth-1.parent > .media > .mr-3 > .url > .avatar {
+	border: 2px solid #D9EDF7;
+}
+div.comment-body p { margin-bottom: 0px;}
+.comment-reply-link {color: #868e96}
+.icon-reply {
+	width: 20px;
+
+}
+textarea.comment-textarea {
+		resize: none;
+}
+.archive-list{margin: 2px 0 1em 0;padding: 5px 0 0 0;left: 0;float: right;max-width: 120px;min-width: 76px;width: 100%;}
+.archive-list a{ text-decoration: none; border-bottom:1px dotted #918f8f; color:#4c4c4c; display:block; line-height:1; height:14px;}
+.archive-list li{ height:21px; list-style:none; margin:0 0 2px 0;}
+.archive-list span{ background:#f8f9fa; padding:0 2px 1px 0;}
+.archive-mounth{ margin-left: 10px;}
+.archive-list .archive-month	{ float:left;}
+.archive-list .archive-count	{ float:right;}
+.control-prev:hover, .control-next:hover {text-decoration: none;}
+.archive-controls {/* position: absolute; */}
+.archive-controls.control-prev {	right: 20px }
+.archive-controls.control-next {	right: 0px }
+img.post-sticky-icon { width: 32px; }
+
+.icon {
+	display: inline-block;
+	text-indent: -9999px;
+}
+a.icon-github,a.icon-twitter,a.icon-facebook {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+a.link-icon {
+	background: url('images/external-link.svg');
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 20px;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	clip: auto !important;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+.widget ul {list-style-type: none; padding-left: 0}.widget ul.children {padding-left: 1.5rem}
+footer ul li{
+list-style: none;
+text-align: left;
+}

@@ -1,3 +1,81 @@
+ The Bootstrap Blog WordPress Theme, Copyright 2020 Paweł Nowak
+    
+ The Bootstrap Blog is distributed under the terms of the GNU GPL
+
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+ In general words, feel free and encouraged to use, modify and redistribute this theme however you like.
+ You may remove any copyright references (unless required by third party components) and crediting is not necessary.
+ The theme is offered free of charge. If someone asked money for it, someone just tricked you.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ 
+ 
+ The Bootstrap Blog Theme bundles the following third-party resources:
+
+* Playfair Display font
+  - Copyright: 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display)
+  - Licence: SIL Open Font License (OFL)
+  - Licence URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+  - Author: Claus Eggers Sørensen Principal design
+  - Author URL: http://forthehearts.net/about/
+  
+
+* pin.svg
+  - Copyright: Entypo
+  - Author URI: http://www.entypo.com/
+  - Licence: CC-BY-SA 4.0
+  - Licence URI: https://creativecommons.org/licenses/by-sa/4.0/
+
+
+* lock.svg
+  - Copyright: Octicons
+  - Author URI: https://octicons.github.com/
+  - @link: https://octicons.github.com/icon/lock/
+  - Licence: MIT
+  - Licence URI: https://github.com/primer/octicons/blob/master/LICENSE
+  
+
+* screenshot.png
+  - Copyright:   https://stocksnap.io/
+  - @link:       https://stocksnap.io/photo/typewriter-vintage-8E6502A3BC
+  - Author:      Sergey Zolkin
+  - Author URI:  https://stocksnap.io/author/276
+  - License:     CC0
+  - Licence URI: https://stocksnap.io/license
+  
+
+* Bootstrap v4.5.2 (https://getbootstrap.com/)
+  - Copyright 2011-2020 The Bootstrap Authors
+  - Copyright 2011-2020 Twitter, Inc.
+  - Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  
+
+* HTML5 Shiv v3.7.0,
+  - Copyright 2014 Alexander Farkas
+  - Licenses: 	MIT/GPL2
+  - Source: 		https://github.com/aFarkas/html5shiv
+
+
+* Respond.js v1.4.2: min/max-width media query polyfill
+  - Copyright 2013 Scott Jehl
+  - Licensed under MIT https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+ 
+------------------------------------------------------------                 
+                    
+                    
+                    
+                    
+                    
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
