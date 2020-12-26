@@ -4,8 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @subpackage The Bootstrap Blog
- * @since 0.1
+ * @since The Bootstrap Blog 0.1
  */
 
 get_header(); ?>
@@ -19,10 +18,22 @@ get_header(); ?>
 <article>
 <li class="media my-3">
 
-<?php if ( !post_password_required() ) the_post_thumbnail( array( 80, 80 ), array ( 'class' => 'd-flex mr-3' )); ?>
+<?php the_post_thumbnail( array( 80, 80 ), array ( 'class' => 'd-flex mr-3' )); ?>
 
-	<div class="media-body">
-      <h5 class="mt-0 mb-1"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?> </a></h5>
+	<div class="media-body w-100">
+		<h5 class="mt-0 mb-1"><a href="<?php esc_url( the_permalink() ); ?>"><?php
+
+		the_bootstrap_blog__padlock();
+
+			 $the_bootstrap_blog_title = the_title( '', '', false );
+
+				if ( $the_bootstrap_blog_title ){
+					echo $the_bootstrap_blog_title;// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				} else {
+					esc_html_e( '(no title)', 'the-bootstrap-blog');
+				}
+				?>
+			 </a></h5>
 
 <?php the_excerpt();
 
@@ -31,7 +42,7 @@ get_header(); ?>
 		$args = array(
 		'before'		=> '<p class="pager">' . esc_html__( 'Pages:', 'the-bootstrap-blog' ),
 		'after'			=> '</p>',
-		'link_before'	=> '<span class="badge badge-danger">',
+		'link_before'	=> '<span class="badge badge-danger badge-pill">',
 		'link_after'	=> '</span>',
 		'separator'		=> '&nbsp;&nbsp;',
 		'pagelink'		=> esc_html_x( 'part: %', 'category & tag page', 'the-bootstrap-blog' )

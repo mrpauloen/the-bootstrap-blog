@@ -4,8 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @subpackage The Bootstrap Blog
- * @since 0.1
+ * @since The Bootstrap Blog 0.1
  */
 
 get_header(); ?>
@@ -17,10 +16,22 @@ get_header(); ?>
 	   <ul class="list-unstyled">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-
 	<article>
 	<li>
-	<a class="link-icon" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	<a href="<?php the_permalink(); ?>">
+<?php
+
+	the_bootstrap_blog__icon_svg( 'link-45deg' );
+
+	$the_bootstrap_blog_title = the_title( '', '', false );
+
+		if ( $the_bootstrap_blog_title ){
+			echo $the_bootstrap_blog_title;// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		} else {
+			esc_html_e( '(no title)', 'the-bootstrap-blog');
+		}
+?>
+</a>
 	</li>
 	<!--
 
@@ -28,8 +39,6 @@ get_header(); ?>
 
 	-->
 	</article>
-
-
 
 <?php endwhile; else: ?>
 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'the-bootstrap-blog' ); ?></p>
@@ -42,12 +51,11 @@ get_header(); ?>
 
 <?php previous_posts_link( esc_html__( 'Newer', 'the-bootstrap-blog' )); ?>
 </nav>
-        </div><!-- /.blog-main -->
+			</div><!-- /.blog-main -->
 
 <?php get_sidebar(); ?>
 
-      </div><!-- /.row -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
 
-    </div><!-- /.container -->
-
-<?php get_footer();?>
+<?php get_footer(); ?>

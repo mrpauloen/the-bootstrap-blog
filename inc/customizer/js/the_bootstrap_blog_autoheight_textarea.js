@@ -25,4 +25,6 @@ jQuery( document ).ready( function( $ ){
 		 $('#form-input').collapse();
 	});
 
+	$('[data-toggle="tooltip"]').tooltip();
+
 });

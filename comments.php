@@ -4,7 +4,6 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @subpackage The Bootstrap Blog
  * @since The Bootstrap Blog 0.1
  */
 
@@ -33,7 +32,7 @@ if ( post_password_required() )
       <label for="wp-comment-cookies-consent">
       <input class="" type="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" value="yes">
 <small>Remember me</small>
-      </label>
+      </label> <span data-toggle="tooltip" data-placement="top" title="' . esc_attr( 'Your data will be stored in this browser and added automaticly so next time you don\'t need to put it again.', 'the-bootstrap-blog' ) . '">' . the_bootstrap_blog__get_icon_svg( 'info-circle-fill', 16 ) . '</span>
     </div>
   </div>',
 
@@ -61,12 +60,12 @@ $comments_args = array(
 'class_form'			=> 'comment-form form-horizontal mt-2',
 'title_reply'      		=> '',
 	/* translators: %s: The translatable 'reply-to' button label. Default 'Leave a Reply to %s', where %s is the author of the comment being replied to. */
-'title_reply_to'    	=> esc_html__( 'You reply to: %s', 'the-bootstrap-blog' )  . '&emsp;',
+'title_reply_to'    	=> esc_html__( 'Re: %s', 'the-bootstrap-blog' )  . '&emsp;',
 'title_reply_before'	=> '<h6 id="reply-title" class="comment-reply-title">',
 'title_reply_after'		=> '</h6>',
 'cancel_reply_before'	=> ' ',
 'cancel_reply_after'	=> '',
-'cancel_reply_link'		=> esc_html__( 'Cancel&nbsp;reply', 'the-bootstrap-blog' ),
+'cancel_reply_link'		=> esc_html__( 'Cancel', 'the-bootstrap-blog' ),
 'id_submit'				=> 'submit',
 'class_submit'			=> 'form-control mb-2 mb-sm-0 form-control-sm round btn btn-outline-primary btn-sm',
 'label_submit'			=> esc_html__( 'Add reply', 'the-bootstrap-blog' ),
@@ -77,7 +76,7 @@ $comments_args = array(
 'must_log_in'			=> '<p class="must-log-in">' .
 
 	sprintf(
-		/* translators: %s: @wp_login_url*/
+		/* translators: %s: wp_login_url */
 		__( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap-blog' ),
 		wp_login_url(
 			apply_filters( 'the_permalink', get_permalink() )
@@ -97,21 +96,25 @@ $comments_args = array(
 	'comment_notes_after' 	=> '',
 	'fields'				=> apply_filters( 'comment_form_default_fields', $fields ),
 	'comment_field'			=> '<div class="form-group">
-<textarea id="commenttext" name="comment" rows="1" class="form-control rounded comment-textarea" ' . $aria_req . ' '. ( $req ? 'required' : '' ) .' placeholder="** Napisz komentarz..."></textarea>
+<textarea id="commenttext" name="comment" rows="1" class="form-control rounded comment-textarea" ' . $aria_req . ' '. ( $req ? 'required' : '' ) .' placeholder="' . esc_attr__( '** Write a comment', 'the-bootstrap-blog' ) . '"></textarea>
 </div>',
 
 ); ?>
 
-<?php   if ( $have_comments || $comments_open ){
+<?php if ( $have_comments || $comments_open ){ ?>
+<h2 class="d-inline-block mt-5"style="clear:both"><?php
 
-?><h2 class="mt-5"><?php printf(
-    /* translators: %s: Number of comments. `Comments` word stay always in plural eg: Comments |1|
-    */
-    esc_html__( 'Comments |%s|', 'the-bootstrap-blog' ),
-     number_format_i18n( $comments_number ) );
-
-?></h2><?php
-    }
+	printf(
+		esc_html(
+			/* translators: %s: Number of comments. `Comments` word stay always in plural eg: Comments |1| */
+			 __('Comments |%s|', 'the-bootstrap-blog' )
+		),
+		number_format_i18n( $comments_number )// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	);
+?>
+</h2>
+<?php
+	}
 
 comment_form( $comments_args );
 
@@ -120,7 +123,6 @@ if ( $have_comments ) {
 	wp_list_comments( array(
     'avatar_size' => get_theme_mod( 'avatar_size', 45 ),
     'type'  => 'all',
-    'reply_text'  => __( '&rarr; Reply', 'the-bootstrap-blog' ),
     'walker' 		=> new The_Bootstrap_Blog_Comments_Walker(),
 	) );
 
@@ -145,16 +147,4 @@ if ( $have_comments ) {
 <?php
 }
 
-	if ( $comments_open ){ ?>
-
-<fieldset class="mt-2 p-2 border" >
-<legend class="h6 px-2" style="width: fit-content;"><?php esc_html_e( 'Legend', 'the-bootstrap-blog' );?></legend>
-<small><?php echo esc_html_x( '*) Required fields are marked', 'comments legend', 'the-bootstrap-blog' ); ?><br/>
-<?php printf(
-	/* translators: %s: Display all of the allowed tags in HTML format (within code tag) with attributes.*/
-esc_html_x( '**) You may use these HTML tags and attributes: %s', 'comments legend', 'the-bootstrap-blog'), '<code>' . allowed_tags() . '</code>' );
-?>
-</small>
-</fieldset>
-
-<?php } ?>
+the_bootstrap_blog__comment_legend();

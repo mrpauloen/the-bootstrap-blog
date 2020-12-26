@@ -6,14 +6,53 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @subpackage The Bootstrap Blog
- * @since 0.1
+ * @since The Bootstrap Blog 0.1
  */
 
-?><footer class="blog-footer">
-	<p><?php /* translators: %s: WordPress. */
-		printf( esc_html__( 'Blog template built for %s.', 'the-bootstrap-blog' ), 'WordPress' ); ?></p>
-	<p><a href="<?php echo esc_url( '#' );?>"><?php esc_html_e( 'Back to top', 'the-bootstrap-blog' );?></a></p>
+?>
+<footer class="blog-footer">
+<?php
+/**
+ * Footer Mega Menu
+ * @since The Bootstrap Blog 0.1.4
+ */
+
+ 	if ( has_nav_menu( 'footer-menu-1' ) ):
+?>
+	<div class="container mb-5">
+	<div class="row">
+	<?php
+
+	$locations = array (
+		'footer-menu-1',
+		'footer-menu-2',
+		'footer-menu-3',
+		'footer-menu-4',
+		'footer-menu-5',
+		'footer-menu-6'
+	);
+
+		foreach ( $locations as $location ){
+
+			$args = array(
+			'theme_location' => $location,
+			'container'=> false,
+			'menu_id' => $location,
+			'menu_class' => 'list-unstyled',
+			'fallback_cb' => false,
+			);
+	?>
+	<div class="col-6 col-md-3 col-lg-2"><?php wp_nav_menu( $args ); ?></div>
+<?php
+		}
+?>
+
+	</div><!-- .row -->
+</div>
+<?php endif; ?>
+
+	<p class="copyright"><?php echo the_bootstrap_blog__custom_footer_text(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in the_bootstrap_blog__sanitize_footer_text() ?></p>
+	<p><a href="<?php echo esc_url( '#' );?>"><?php esc_html_e( '&uarr; Back to top', 'the-bootstrap-blog' );?></a></p>
     </footer>
 
 <?php wp_footer(); ?>

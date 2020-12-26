@@ -6,16 +6,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- *
- * @subpackage The Bootstrap Blog
- * @since 0.1
+ * @since The Bootstrap Blog 0.1
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html  class="no-js" <?php language_attributes(); ?>>
   <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 
@@ -24,8 +24,16 @@
 
   <?php wp_body_open(); ?>
 
-    <div class="blog-masthead">
-      <div class="container nav-scroller">
+<?php // Let's get them only once
+$has_header_image = has_header_image();
+?>
+
+		<div class="blog-masthead<?php
+	 if ( $has_header_image ){
+			echo esc_attr( ' border-bottom border-white' );
+	}
+	 ?>">
+			<div class="container nav-scroller">
 
 <?php
 		wp_nav_menu( array(
@@ -41,16 +49,20 @@
 			)
 		);
 ?>
-      </div>
-    </div>
+			</div>
+		</div>
 
-  <header class="blog-header">
-  <div class="container">
-    <h1 class="blog-title mb-2"><?php the_bootstrap_blog__site_title(); ?></h1>
-<?php if ( is_archive() ) { ?>
-<p class="lead blog-description"><?php the_archive_title(); ?><p/>
-<?php } else { ?>
-    <p class="lead blog-description"><?php bloginfo('description'); ?></p>
-<?php } ?>
+<header class="blog-header">
+  <div class="container<?php
+	if ( $has_header_image ){
+		echo esc_attr( ' has-custom-header');
+	}
+	?>">
+		<h1 class="site-title"><?php the_bootstrap_blog__site_title(); ?></h1><br/>
+		<p class="lead site-description<?php
+		if ( ! $has_header_image ){
+			echo esc_attr( ' text-muted' );
+		}
+		?>"><?php the_bootstrap_blog__site_description(); ?></p>
   </div>
 </header>

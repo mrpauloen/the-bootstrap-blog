@@ -1,5 +1,5 @@
- The Bootstrap Blog WordPress Theme, Copyright 2020 Paweł Nowak
-    
+ The Bootstrap Blog WordPress Theme, Copyright 2016 Paweł Nowak
+
  The Bootstrap Blog is distributed under the terms of the GNU GPL
 
 
@@ -18,9 +18,14 @@
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  GNU General Public License for more details.
- 
- 
+
+
  The Bootstrap Blog Theme bundles the following third-party resources:
+
+* TwentyTwenty_SVG_Icons class
+   - Copyright: Twenty Twenty WordPress Theme, Copyright 2019-2020 WordPress.org
+   - License: GPLv2 or later
+   - License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 * Playfair Display font
   - Copyright: 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display)
@@ -28,7 +33,7 @@
   - Licence URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
   - Author: Claus Eggers Sørensen Principal design
   - Author URL: http://forthehearts.net/about/
-  
+
 
 * pin.svg
   - Copyright: Entypo
@@ -37,14 +42,6 @@
   - Licence URI: https://creativecommons.org/licenses/by-sa/4.0/
 
 
-* lock.svg
-  - Copyright: Octicons
-  - Author URI: https://octicons.github.com/
-  - @link: https://octicons.github.com/icon/lock/
-  - Licence: MIT
-  - Licence URI: https://github.com/primer/octicons/blob/master/LICENSE
-  
-
 * screenshot.png
   - Copyright:   https://stocksnap.io/
   - @link:       https://stocksnap.io/photo/typewriter-vintage-8E6502A3BC
@@ -52,13 +49,13 @@
   - Author URI:  https://stocksnap.io/author/276
   - License:     CC0
   - Licence URI: https://stocksnap.io/license
-  
+
 
 * Bootstrap v4.5.2 (https://getbootstrap.com/)
   - Copyright 2011-2020 The Bootstrap Authors
   - Copyright 2011-2020 Twitter, Inc.
   - Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  
+
 
 * HTML5 Shiv v3.7.0,
   - Copyright 2014 Alexander Farkas
@@ -69,13 +66,13 @@
 * Respond.js v1.4.2: min/max-width media query polyfill
   - Copyright 2013 Scott Jehl
   - Licensed under MIT https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
- 
-------------------------------------------------------------                 
-                    
-                    
-                    
-                    
-                    
+
+------------------------------------------------------------
+
+
+
+
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
