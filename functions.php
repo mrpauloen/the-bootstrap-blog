@@ -582,7 +582,7 @@ function the_bootstrap_blog__filter__excerpt_more( $more ) {
 	if ( is_search() || is_archive() ){
 		return $more;
 	}
-	return $more . ' <a class="read-more" href="' . get_the_permalink() . '" title="' . esc_attr__( 'Permanent Link to: ', 'the-bootstrap-blog' ) . the_title_attribute( 'echo=0' ) . '">' . __( '&rarr;Read&nbsp;more</a>', 'the-bootstrap-blog');
+	return $more . ' <a class="read-more" href="' . get_the_permalink() . '" title="' . esc_attr__( 'Permanent Link to: ', 'the-bootstrap-blog' ) . the_title_attribute( 'echo=0' ) . '">' . __( '&rarr;Read&nbsp;more', 'the-bootstrap-blog') . '</a>';
 }
 add_filter( 'get_the_excerpt', 'the_bootstrap_blog__filter__excerpt_more', 10 );
 
