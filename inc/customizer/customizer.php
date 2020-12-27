@@ -181,7 +181,9 @@ function the_bootstrap_blog__theme_customize( $wp_customize ) {
 				'title'      => __( 'Custom footer', 'the-bootstrap-blog' ),
 				'description'	=> sprintf(
 					/* translators: 1 allowed HTML tags, 2: predefined tags */
-					__( 'Footer text is displayed by default. Change it using input field bellow. If nothing specified, default text will be used instead. You may use some HTML tags and attributes: <code>%1$s</code><br>As well as some predefined tags: <code>%2$s</code>',  'the-bootstrap-blog' ), esc_html( '<a href="" title=""> <b> <del datetime=""> <em> <i> <q cite=""> <s> <strike> <strong>' ), esc_html( '{sitetitle} {sitedescription} {year}' )),
+					__( 'Footer text is displayed by default. Change it using input field bellow. If nothing specified, default text will be used instead. You may use some HTML tags and attributes: <code>%1$s</code><br>As well as some predefined tags: <code>%2$s</code>',  'the-bootstrap-blog' ),
+					 esc_html( '<a href="" title=""> <b> <del datetime=""> <em> <i> <q cite=""> <s> <strike> <strong>' ),
+					 esc_html( '{sitetitle} {sitedescription} {year}' )),
 				'description_hidden' => true,
 
 		) );
@@ -258,8 +260,7 @@ function the_bootstrap_blog__theme_customize( $wp_customize ) {
 				'description'	=> sprintf(
 						wp_kses(
 							/* translators: %1$s: the_excerpt (word); %2$s !--more-- (tag); %3$s: url to codex; %4$s: url to codex */
-							__( 'Use this option to control the excerpt lenght on the home and archive page. The default excerpt length is 55 words. This setting works only when a post themplate use <code>%1$s</code> template tag and the excerpt is created automatically (excerpt meta box on the post editor screen is empty) but no longer than the <code>%2$s</code> tag (if it\'s used).
-				See: <a href="%3$s" target="_blank">Excerpt</a> or <a href="%4$s" target="_blank">Customizing_the_Read_More</a> in codex.', 'the-bootstrap-blog' ),
+							__( 'Use this option to control the excerpt lenght on the home and archive page. The default excerpt length is 55 words. This setting works only when a post themplate use <code>%1$s</code> template tag and the excerpt is created automatically (excerpt meta box on the post editor screen is empty) but no longer than the <code>%2$s</code> tag (if it\'s used). See: <a href="%3$s" target="_blank">Excerpt</a> or <a href="%4$s" target="_blank">Customizing_the_Read_More</a> in codex.', 'the-bootstrap-blog' ),
 							array(
 								'a' => array(
 									'href' => array(),
