@@ -6,7 +6,7 @@
 Summary:           | The Bootstrap Blog
 -------------------|----------------
 Contributors:      | [mrpauloen](https://profiles.wordpress.org/mrpauloen/)
-Version:           | 0.1.4
+Version:           | 0.1.4.2
 Requires at least: | 5.3
 Tested up to:      | 5.6
 Requires PHP:	     | 7.0
@@ -147,6 +147,11 @@ If there is something you don't understand, please use the support forum:
 https://wordpress.org/support/theme/the-bootstrap-blog
 
 ## Changelog
+
+=== 0.1.4.1-2 ===
+*Released: December 27, 2020*
+
+* Fixed small bugs in translations strings
 
 ### 0.1.4
 *Released: December 26, 2020*
