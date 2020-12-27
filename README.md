@@ -16,7 +16,7 @@ Tags:              | two-columns, custom-menu, custom-background, right-sidebar,
 
 ## Description
 
-Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
+Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days..
 
 
 ## Installation

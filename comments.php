@@ -32,7 +32,7 @@ if ( post_password_required() )
       <label for="wp-comment-cookies-consent">
       <input class="" type="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" value="yes">
 <small>Remember me</small>
-      </label> <span data-toggle="tooltip" data-placement="top" title="' . esc_attr( 'Your data will be stored in this browser and added automaticly so next time you don\'t need to put it again.', 'the-bootstrap-blog' ) . '">' . the_bootstrap_blog__get_icon_svg( 'info-circle-fill', 16 ) . '</span>
+      </label> <span data-toggle="tooltip" data-placement="top" title="' . esc_attr__( 'Your data will be stored in this browser and added automaticly so next time you don\'t need to put it again.', 'the-bootstrap-blog' ) . '">' . the_bootstrap_blog__get_icon_svg( 'info-circle-fill', 16 ) . '</span>
     </div>
   </div>',
 
