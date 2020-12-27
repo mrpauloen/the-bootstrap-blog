@@ -42,7 +42,7 @@
 			'menu_id' => $location,
 			'menu_class' => 'list-unstyled',
 			'fallback_cb' => false,
-			);
+			)
 		);
 	 ?>
 </div>
