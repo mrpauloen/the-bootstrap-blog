@@ -9,8 +9,7 @@
 ?><div class="col-sm-3 offset-sm-1 blog-sidebar mb-3">
 
 <?php
-	wp_nav_menu(
-	array(
+	wp_nav_menu( array(
 		'theme_location'  => 'social-before-widgets',
 		'container'       => '',
 		'container_class' => '',
@@ -21,15 +20,14 @@
 		'link_before'     => '<span class="screen-reader-text">',
 		'link_after'      => '</span>',
 		'fallback_cb' => false,
-	)
+		)
 	);
 ?>
 
 <?php if ( is_active_sidebar('sidebar') ) : dynamic_sidebar('sidebar'); endif;?>
 
 <?php
-wp_nav_menu(
-	array(
+wp_nav_menu( array(
 		'theme_location'  => 'social-after-widgets',
 		'container'       => '',
 		'container_class' => '',

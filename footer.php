@@ -31,20 +31,23 @@
 		'footer-menu-5',
 		'footer-menu-6'
 	);
+	foreach ( $locations as $location ){
+?>
+	<div class="col-6 col-md-3 col-lg-2">
+<?php
 
-		foreach ( $locations as $location ){
-
-			$args = array(
+	 wp_nav_menu( array(
 			'theme_location' => $location,
 			'container'=> false,
 			'menu_id' => $location,
 			'menu_class' => 'list-unstyled',
 			'fallback_cb' => false,
 			);
-	?>
-	<div class="col-6 col-md-3 col-lg-2"><?php wp_nav_menu( $args ); ?></div>
+		);
+	 ?>
+</div>
 <?php
-		}
+	}
 ?>
 
 	</div><!-- .row -->
