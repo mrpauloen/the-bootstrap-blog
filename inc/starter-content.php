@@ -32,7 +32,6 @@ function the_bootstrap_blog__get_starter_content() {
 			'home' => array(
 				'post_type' => 'page',
 				'post_title' => _x( 'Home', 'Theme starter content', 'the-bootstrap-blog' ),
-				'post_content' => _x( 'Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time.', 'Theme starter content', 'the-bootstrap-blog' ),
 			),
 			'about' => array(
 				'post_type' => 'page',
