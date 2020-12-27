@@ -180,8 +180,8 @@ function the_bootstrap_blog__theme_customize( $wp_customize ) {
 			array(
 				'title'      => __( 'Custom footer', 'the-bootstrap-blog' ),
 				'description'	=> sprintf(
-					/* translators: %s allowed HTML tags */
-					__( 'Footer text is displayed by default. Change it using input field bellow. If nothing specified, default text will be used instead. You may use some HTML tags and attributes: <code>%s</code><br>As well as some predefined tags: <code>%s</code>',  'the-bootstrap-blog' ), esc_html( '<a href="" title=""> <b> <del datetime=""> <em> <i> <q cite=""> <s> <strike> <strong>' ), esc_html( '{sitetitle} {sitedescription} {year}' )),
+					/* translators: 1 allowed HTML tags, 2: predefined tags */
+					__( 'Footer text is displayed by default. Change it using input field bellow. If nothing specified, default text will be used instead. You may use some HTML tags and attributes: <code>%1$s</code><br>As well as some predefined tags: <code>%1$s</code>',  'the-bootstrap-blog' ), esc_html( '<a href="" title=""> <b> <del datetime=""> <em> <i> <q cite=""> <s> <strike> <strong>' ), esc_html( '{sitetitle} {sitedescription} {year}' )),
 				'description_hidden' => true,
 
 		) );
