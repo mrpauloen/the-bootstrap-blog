@@ -147,6 +147,11 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 == Changelog ==
 
+=== 0.1.4.1 ===
+*Released: December 27, 2020*
+
+* Fixed small bugs in translations strings
+
 === 0.1.4 ===
 *Released: December 26, 2020*
 
