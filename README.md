@@ -89,7 +89,7 @@ Based on the popular Bootstrap 4 library, this theme shows how mobile friendly C
   - Licence URI: https://creativecommons.org/licenses/by-sa/4.0/
 
 
-* Bootstrap v4.5.3 (https://getbootstrap.com/)
+* Bootstrap v4.6.0 (https://getbootstrap.com/)
   - Copyright 2011-2020 The Bootstrap Authors
   - Copyright 2011-2020 Twitter, Inc.
   - Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
