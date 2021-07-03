@@ -87,7 +87,9 @@ $comments_args = array(
 	sprintf(
 	/* translators: %1$s: admin profile url; %2$s: @user_identity; %3$s: @wp_logout_url */
 		__( 'You\'re logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap-blog'),
-			admin_url( 'profile.php' ), $user_identity, wp_logout_url(
+			admin_url( 'profile.php' ),
+			$user_identity,
+			wp_logout_url(
 				apply_filters( 'the_permalink', get_permalink( ) )
 			)
 	) . '</p>',
