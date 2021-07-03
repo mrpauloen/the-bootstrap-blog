@@ -12,16 +12,16 @@ jQuery.noConflict();
 
 jQuery( document ).ready( function( $ ){
 
-	$('textarea').each(function () {
+	$('#comment').each(function () {
 	  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
 	}).on('input', function () {
 	  this.style.height = 'auto';
 	  this.style.height = (this.scrollHeight) + 'px';
 	});
 
-	$('textarea').trigger('input');
+	$('#comment').trigger('input');
 
-	$('#commenttext').focus(function(){
+	$('#comment').focus(function(){
 		 $('#form-input').collapse();
 	});
 
