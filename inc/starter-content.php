@@ -15,6 +15,11 @@
 function the_bootstrap_blog__get_starter_content() {
 
 	$starter_content = array(
+
+		'options' => array(
+					'blogdescription' => _x( 'This is the Tagline... a short description of your website.', 'Theme starter content', 'the-bootstrap-blog' ),
+				),
+
 		'widgets' => array(
 			'sidebar' => array(
 				'search' => array(
