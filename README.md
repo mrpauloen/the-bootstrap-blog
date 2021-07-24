@@ -6,7 +6,7 @@
 Summary:           | The Bootstrap Blog
 -------------------|----------------
 Contributors:      | [mrpauloen](https://profiles.wordpress.org/mrpauloen/)
-Version:           | 0.1.4.2
+Version:           | 0.1.4.3
 Requires at least: | 5.3
 Tested up to:      | 5.6
 Requires PHP:	     | 7.0
@@ -147,6 +147,11 @@ If there is something you don't understand, please use the support forum:
 https://wordpress.org/support/theme/the-bootstrap-blog
 
 ## Changelog
+
+### 0.1.4.3
+*Released: July 24, 2021*
+
+* Fixed slamm issue with Akismet hidden textarea field
 
 ### 0.1.4.1-2
 *Released: December 27, 2020*
