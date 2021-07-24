@@ -151,7 +151,7 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 ### 0.1.4.3
 *Released: July 24, 2021*
 
-* Fixed slamm issue with Akismet hidden textarea field
+* Fixed small issue with Akismet hidden textarea field
 
 ### 0.1.4.1-2
 *Released: December 27, 2020*

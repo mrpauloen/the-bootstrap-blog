@@ -1,7 +1,7 @@
 == The Bootstrap Blog ==
 Requires at least: 5.3
 Tested up to: 5.6
-Version: 0.1.4.2
+Version: 0.1.4.3
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, custom-menu, custom-background, right-sidebar, custom-header, featured-images, sticky-post, threaded-comments, translation-ready, blog
@@ -146,6 +146,11 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 
 == Changelog ==
+
+=== 0.1.4.3 ===
+*Released: July 24, 2021
+
+* Fixed small issue with Akismet hidden textarea field
 
 === 0.1.4.1-2 ===
 *Released: December 27, 2020*
