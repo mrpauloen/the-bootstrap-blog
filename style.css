@@ -107,6 +107,12 @@ h6, .h6 {
     color: #fff!important;
 }
 /*
+ * Override Bootstrap's default collapse behavior if JS is not supported.
+ */
+.no-js .collapse:not(.show) {
+    display: inherit;
+}
+/*
  * Masthead for nav
  */
 .blog-masthead {
