@@ -38,7 +38,7 @@ Activiation and Use
 
 == Copyright & License Notes ==
 
- The Bootstrap Blog WordPress Theme, Copyright 2016 Paweł Nowak
+ The Bootstrap Blog WordPress Theme, Copyright 2016-2021 Paweł Nowak
  The Bootstrap Blog is distributed under the terms of the GNU GPL
 
 
@@ -61,7 +61,7 @@ Activiation and Use
  The Bootstrap Blog Theme bundles the following third-party resources:
 
 * TwentyTwenty_SVG_Icons class
-** Copyright: Twenty Twenty WordPress Theme, Copyright 2019-2020 WordPress.org
+** Copyright: Twenty Twenty WordPress Theme, Copyright 2019-2021 WordPress.org
 ** License: GPLv2 or later
 ** License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
