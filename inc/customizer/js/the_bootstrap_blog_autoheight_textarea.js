@@ -22,7 +22,7 @@ jQuery( document ).ready( function( $ ){
 	$('#comment').trigger('input');
 
 	$('#comment').focus(function(){
-		 $('#form-input').collapse();
+		 $('#form-input').collapse('show');
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
