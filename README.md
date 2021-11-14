@@ -90,8 +90,8 @@ Based on the popular Bootstrap 4 library, this theme shows how mobile friendly C
 
 
 * Bootstrap v4.6.0 (https://getbootstrap.com/)
-  - Copyright 2011-2020 The Bootstrap Authors
-  - Copyright 2011-2020 Twitter, Inc.
+  - Copyright 2011-2021 The Bootstrap Authors
+  - Copyright 2011-2021 Twitter, Inc.
   - Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
 
