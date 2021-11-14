@@ -23,7 +23,7 @@ if ( post_password_required() )
 	$aria_req		= ( $req ? ' aria-required="true"' : '' );
 	$user			= wp_get_current_user();
 
-  $collapse = ( isset( $_GET['replytocom'] ) ) ? '' : 'collapse';
+  $collapse = ( isset( $_GET['replytocom'] ) ) ? 'collapse show' : 'collapse';
 	$fields =  array(
 
 	'cookies' => '<div id="form-input"  class="' . esc_attr( $collapse ) . '">
