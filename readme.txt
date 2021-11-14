@@ -1,7 +1,7 @@
 == The Bootstrap Blog ==
 Requires at least: 5.5
 Tested up to: 5.8
-Version: 0.1.4.3
+Version: 0.1.4.4
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, custom-menu, custom-background, right-sidebar, custom-header, featured-images, sticky-post, threaded-comments, translation-ready, blog
@@ -79,16 +79,8 @@ Activiation and Use
 ** Licence URI: https://creativecommons.org/licenses/by-sa/4.0/
 **
 
-*! screenshot.png
-** Copyright:   https://stocksnap.io/
-** @link:       https://stocksnap.io/photo/typewriter-vintage-8E6502A3BC
-** Author:      Sergey Zolkin
-** Author URI:  https://stocksnap.io/author/276
-** License:     CC0
-** Licence URI: https://stocksnap.io/license
-
 *!
-** Bootstrap v4.5.3 (https://getbootstrap.com/)
+** Bootstrap v4.6 (https://getbootstrap.com/)
 ** Copyright 2011-2020 The Bootstrap Authors
 ** Copyright 2011-2020 Twitter, Inc.
 ** Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -147,8 +139,15 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 == Changelog ==
 
+=== 0.1.4.4 ===
+*Released: November 14, 2021*
+
+* Added: support JS
+** Remove the no-js class from body if JS is supported
+
+
 === 0.1.4.3 ===
-*Released: July 24, 2021
+*Released: July 24, 2021*
 
 * Fixed small issue with Akismet hidden textarea field
 
