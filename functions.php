@@ -467,63 +467,6 @@ function the_bootstrap_blog__filter__post_thumbnail_html( $html ) {
 	}
 }
 
-/**
- * This filter is explained in this ticket:
- * @link https://core.trac.wordpress.org/ticket/51189
- *
- * @since The Bootstrap Blog 0.1.2
- */
-
-add_filter( 'comment_reply_link', 'the_bootstrap_blog__filter__comment_reply_link', 10, 4 );
-function the_bootstrap_blog__filter__comment_reply_link( $link, $args, $comment, $post ){
-	global $wp_rewrite;
-
-	$page = get_page_of_comment( $comment->comment_ID );
-
-// Copied from get_comment_reply_link() function
-	if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) {
-		$link = sprintf(
-			'<a rel="nofollow" class="comment-reply-login small" href="%s">%s</a>',
-			esc_url( wp_login_url( get_permalink() ) ),
-			$args['login_text']
-		);
-	} else {
-		$data_attributes = array(
-			'commentid'      => $comment->comment_ID,
-			'postid'         => $post->ID,
-			'belowelement'   => $args['add_below'] . '-' . $comment->comment_ID,
-			'respondelement' => $args['respond_id'],
-			'replyto'        => sprintf( $args['reply_to_text'], $comment->comment_author ),
-		);
-
-		$data_attribute_string = '';
-
-		foreach ( $data_attributes as $name => $value ) {
-			$data_attribute_string .= " data-${name}=\"" . esc_attr( $value ) . '"';
-		}
-
-		$data_attribute_string = trim( $data_attribute_string );
-
-		$link = sprintf(
-			"<a rel='nofollow' class='comment-reply-link small' href='%s' %s aria-label='%s'>%s</a>",
-			esc_url(
-				add_query_arg(
-					array(
-						'replytocom'      => $comment->comment_ID,
-						'unapproved'      => false,
-						'moderation-hash' => false,
-					),
-					get_permalink( $post->ID ) . $wp_rewrite->comments_pagination_base . '-' . $page . '/'
-				)
-			) . '#' . $args['respond_id'],
-			$data_attribute_string,
-			esc_attr( sprintf( $args['reply_to_text'], $comment->comment_author ) ),
-			$args['reply_text']
-		);
-	}
-	 return $args['before'] . $link . $args['after'];
-}
-
 /** Default excerpt length **/
 
 function the_bootstrap_blog__default_excerpt_length(){
