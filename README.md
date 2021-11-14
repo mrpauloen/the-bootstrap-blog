@@ -153,6 +153,8 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 * Added: support JS
   - Remove the `no-js` class from body if JS is supported
+* Removed: unnecessary comment_reply_link filter hook
+  - fixed by new patch (51081)
 
 ### 0.1.4.3
 *Released: July 24, 2021*
