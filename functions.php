@@ -252,6 +252,18 @@ function the_bootstrap_blog__action__skip_link() {
 }
 
 /**
+ * Remove the `no-js` class from body if JS is supported.
+ *
+ * @since The Bootstrap Blog 0.1.4.4
+ *
+ * @return void
+ */
+function the_bootstrap_blog__action__supports_js() {
+	echo '<script>document.body.classList.remove("no-js");</script>';
+}
+add_action( 'wp_footer', 'the_bootstrap_blog__action__supports_js' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
