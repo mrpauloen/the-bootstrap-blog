@@ -22,26 +22,27 @@
  	if ( is_attachment() ) {
  		$site_title =  __( 'Attachment', 'the-bootstrap-blog');
  	}
-  // if feature is active, it display post title instead of site title,
-  // then site title from the article container is removed
-  // since v 0.1.5
+  /**
+   * if feature is active, it display post title instead of site title,
+   * then site title from the article container is removed
+   * @since v 0.1.5
+   */
   elseif ( is_single() and get_theme_mod( 'header_as_title' ) ){
-     $site_title = the_bootstrap_blog__padlock() . single_post_title('', FALSE);
+     $site_title = the_bootstrap_blog__padlock() . single_post_title( '', FALSE );
   }
-
  	elseif ( is_404() ) {
- 		$site_title =  __( '404', 'the-bootstrap-blog');
+ 		$site_title =  __( '404', 'the-bootstrap-blog' );
  	}
   elseif ( is_search() ) {
     /* translators: %s: search query variable */
     $site_title =  sprintf ( __( 'Search for: <i>%s</i>', 'the-bootstrap-blog' ), get_search_query() );
   }
-	elseif ( is_author()   ) {
- 	$site_title =  __( 'Author', 'the-bootstrap-blog');
+	elseif ( is_author() ) {
+ 	$site_title =  __( 'Author', 'the-bootstrap-blog' );
  	}
  	// if there is archive display: Archive
- 	elseif ( is_archive()  ) {
- 	$site_title =  __( 'Archive', 'the-bootstrap-blog');
+ 	elseif ( is_archive() ) {
+ 	$site_title =  __( 'Archive', 'the-bootstrap-blog' );
  	}
  	// in other any cases display hyperlinked blog name
  	else {

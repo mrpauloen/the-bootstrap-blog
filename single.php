@@ -18,9 +18,12 @@ get_header(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post' ); ?>>
 
-	<h2 class="blog-post-title"><?php the_bootstrap_blog__padlock(); the_title(); ?> <?php the_bootstrap_blog__sticky_pin(); ?></h2>
+	<?php if ( ! get_theme_mod( 'header_as_title' ) ) { ?>
+  <h2 class="blog-post-title"><?php the_bootstrap_blog__padlock(); the_title(); ?> <?php the_bootstrap_blog__sticky_pin(); ?></h2>
 
-<?php // Get condition once so there is no repetitions
+<?php }
+
+// Get condition once so there is no repetitions
 $password_required = post_password_required();
 
 if ( ! $password_required ){ ?>

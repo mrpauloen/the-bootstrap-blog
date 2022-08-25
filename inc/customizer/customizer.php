@@ -373,6 +373,53 @@ function the_bootstrap_blog__theme_customize( $wp_customize ) {
 			)
 		);
 
+
+		/**
+		 *
+		 * Option three - Header as title
+		 * Display post title in header section in place of sites title & tagline
+		 *
+		 * @since The Bootstrap Blog 0.1.5
+		 */
+
+			$wp_customize->add_section(
+				'header_as_title_section',
+				array(
+					'title'      => __( 'Header as title', 'the-bootstrap-blog' ),
+					'description'	=> __( 'Display post title in header section in place of sites title and tagline',  'the-bootstrap-blog' ),
+					'description_hidden' => true,
+
+			) );
+
+			/**
+			 * Display header as title
+			 *
+			 * @return boolean True on success, false on failure.
+			 */
+
+			$wp_customize->add_setting(
+				// $id
+				'header_as_title',
+				// $args
+				array(
+					'default'			=> false,
+					'type'				=> 'theme_mod',
+					'capability'		=> 'edit_theme_options',
+					'sanitize_callback'	=> 'the_bootstrap_blog__sanitize_checkbox'
+				)
+			);
+
+			$wp_customize->add_control(
+				// $id
+				'header_as_title_control',
+				// $args
+				array(
+					'label'			=> __( 'Header as title', 'the-bootstrap-blog' ),
+					'settings'		=> 'header_as_title',
+					'section'		=> 'header_as_title_section',
+					'type'			=> 'checkbox'
+			)
+			);
 }
 add_action( 'customize_register', 'the_bootstrap_blog__theme_customize', 11 );
 
