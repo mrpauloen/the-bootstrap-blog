@@ -11,7 +11,7 @@
   *
   * This function changes the way you see (in header section)
   * your site tile (or blog name), depends on different pages
-  * See line: 36 in header.php file
+  * See line: 61 in header.php file
   *
   * @since The Bootstrap Blog 0.1
   */
@@ -22,19 +22,27 @@
  	if ( is_attachment() ) {
  		$site_title =  __( 'Attachment', 'the-bootstrap-blog');
  	}
+  /**
+   * if feature is active, it display post title instead of site title,
+   * then site title from the article container is removed
+   * @since v 0.1.5
+   */
+  elseif ( is_single() and get_theme_mod( 'header_as_title' ) ){
+     $site_title = the_bootstrap_blog__padlock() . single_post_title( '', FALSE );
+  }
  	elseif ( is_404() ) {
- 		$site_title =  __( '404', 'the-bootstrap-blog');
+ 		$site_title =  __( '404', 'the-bootstrap-blog' );
  	}
   elseif ( is_search() ) {
     /* translators: %s: search query variable */
     $site_title =  sprintf ( __( 'Search for: <i>%s</i>', 'the-bootstrap-blog' ), get_search_query() );
   }
-	elseif ( is_author()   ) {
- 	$site_title =  __( 'Author', 'the-bootstrap-blog');
+	elseif ( is_author() ) {
+ 	$site_title =  __( 'Author', 'the-bootstrap-blog' );
  	}
  	// if there is archive display: Archive
- 	elseif ( is_archive()  ) {
- 	$site_title =  __( 'Archive', 'the-bootstrap-blog');
+ 	elseif ( is_archive() ) {
+ 	$site_title =  __( 'Archive', 'the-bootstrap-blog' );
  	}
  	// in other any cases display hyperlinked blog name
  	else {
@@ -53,9 +61,18 @@
  * @since The Bootstrap Blog 0.1.4
  */
 function the_bootstrap_blog__site_description(){
-  global $wp_query;
+  global $wp_query, $post;
 
-  if ( is_archive() ){
+  // if there is attachment page display: Attachment
+ 	if ( is_attachment() ) {
+    echo get_queried_object()->post_title;
+ 	}
+    // if feature is active, it display post excerpt instead of site description,
+  elseif ( is_single() and get_theme_mod( 'header_as_title' ) ){
+    remove_filter( 'get_the_excerpt', 'the_bootstrap_blog__filter__excerpt_more' );
+    echo get_the_excerpt( $post );
+  }
+  elseif ( is_archive() ){
       the_archive_title();
   } elseif ( is_404() ) {
        esc_html_e( 'Sorry, no posts matched your criteria.', 'the-bootstrap-blog' );

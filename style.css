@@ -2,10 +2,10 @@
 Theme Name: The Bootstrap Blog
 Author: mrpauloen
 Author URI: https://profiles.wordpress.org/mrpauloen/
-Description: Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
-Version: 0.1.4.4
+Description: A simple two-column WordPress theme, built on Bootstrap 4 with custom navigation, header, and type. Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
+Version: 0.1.5
 Requires at least: 5.5
-Tested up to: 5.8
+Tested up to: 6.0
 Requires PHP: 7.0
 Tags: two-columns, custom-menu, custom-background, right-sidebar, custom-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, blog
 License: GPLv2 or later
@@ -15,7 +15,7 @@ Domain Path: /languages
 
 == Copyright & License Notes ==
 
- The Bootstrap Blog WordPress Theme, Copyright 2016-2021 Paweł Nowak
+ The Bootstrap Blog WordPress Theme, Copyright 2016-2022 Paweł Nowak
  The Bootstrap Blog is distributed under the terms of the GNU GPL
 
 

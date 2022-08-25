@@ -58,7 +58,7 @@ $has_header_image = has_header_image();
 		echo esc_attr( ' has-custom-header');
 	}
 	?>">
-		<h1 class="site-title"><?php the_bootstrap_blog__site_title(); ?></h1><br/>
+		<h1 id="site-title" class="site-title"><?php the_bootstrap_blog__site_title(); ?></h1><br/>
 		<p class="lead site-description<?php
 		if ( ! $has_header_image ){
 			echo esc_attr( ' text-muted' );

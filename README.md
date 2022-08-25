@@ -6,9 +6,9 @@
 Summary:           | The Bootstrap Blog
 -------------------|----------------
 Contributors:      | [mrpauloen](https://profiles.wordpress.org/mrpauloen/)
-Version:           | 0.1.4.4
+Version:           | 0.1.5
 Requires at least: | 5.5
-Tested up to:      | 5.8
+Tested up to:      | 6.0
 Requires PHP:  	   | 7.0
 License:           | GPLv2 or later
 License URI:       | http://www.gnu.org/licenses/gpl-2.0.html
@@ -148,13 +148,18 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 ## Changelog
 
+### 0.1.5
+*Released: August, 2022*
+
+* Added: Header as Title feature
+
 ### 0.1.4.4
-*Released: November 14, 2021
+*Released: November 14, 2021*
 
 * Added: support JS
   - Remove the `no-js` class from body if JS is supported
 * Removed: unnecessary comment_reply_link filter hook
-  - fixed by new patch (51081)
+  - fixed by new WordPress patch (51081)
 
 ### 0.1.4.3
 *Released: July 24, 2021*

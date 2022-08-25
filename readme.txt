@@ -1,6 +1,6 @@
 == The Bootstrap Blog ==
 Requires at least: 5.5
-Tested up to: 5.8
+Tested up to: 6.0
 Version: 0.1.4.4
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,7 +11,6 @@ A simple two-column blog template built with Bootstrap with custom navigation, h
 == Description ==
 
 Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
-
 
 == Installation ==
 
@@ -38,7 +37,7 @@ Activiation and Use
 
 == Copyright & License Notes ==
 
- The Bootstrap Blog WordPress Theme, Copyright 2016-2021 Paweł Nowak
+ The Bootstrap Blog WordPress Theme, Copyright 2016-2022 Paweł Nowak
  The Bootstrap Blog is distributed under the terms of the GNU GPL
 
 
@@ -139,27 +138,32 @@ https://wordpress.org/support/theme/the-bootstrap-blog
 
 == Changelog ==
 
+=== 0.1.5 ===
+''Released: August, 2022''
+
+* Added: Header as Title feature
+
 === 0.1.4.4 ===
-*Released: November 14, 2021*
+''Released: November 14, 2021''
 
 * Added: support JS
 ** Remove the no-js class from body if JS is supported
 * Removed: unnecessary comment_reply_link filter hook
-** fixed by new patch (51081)
+** fixed by new WordPres patch (51081)
 
 
 === 0.1.4.3 ===
-*Released: July 24, 2021*
+''Released: July 24, 2021''
 
 * Fixed small issue with Akismet hidden textarea field
 
 === 0.1.4.1-2 ===
-*Released: December 27, 2020*
+''Released: December 27, 2020''
 
 * Fixed small bugs in translations strings
 
 === 0.1.4 ===
-*Released: December 26, 2020*
+''Released: December 26, 2020''
 
 * New features added:
 ** Custom footer text (with predefined tags)
