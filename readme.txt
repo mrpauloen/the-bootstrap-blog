@@ -10,7 +10,7 @@ A simple two-column blog template built with Bootstrap with custom navigation, h
 
 == Description ==
 
-A simple two-column blog template built with Bootstrap with custom navigation, header, and type.. Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
+Based on the popular Bootstrap 4 library, this theme shows how mobile friendly CSS framework can be used to create sleek, simple, fast and functional websites, with ease and intuitive way in modern front-end web developmen days.
 
 == Installation ==
 
